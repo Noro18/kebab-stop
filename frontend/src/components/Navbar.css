@@ -1,0 +1,120 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 0;
+  z-index: 1000;
+  transition: var(--transition-smooth);
+}
+
+.navbar.scrolled {
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(211, 84, 0, 0.2);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-smoke);
+}
+
+.logo span {
+  color: var(--color-orange);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-smoke);
+  opacity: 0.8;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: var(--color-orange);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta-desktop {
+  background: var(--color-orange);
+  color: var(--color-smoke);
+  padding: 10px 25px;
+  border-radius: 4px;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-ember);
+}
+
+.cta-desktop:hover {
+  background: var(--color-crimson);
+  transform: translateY(-2px);
+}
+
+.cta-mobile {
+  display: none;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  color: var(--color-smoke);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    background: var(--color-dark-gray);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .cta-desktop {
+    display: none;
+  }
+
+  .cta-mobile {
+    display: block;
+    margin-top: 20px;
+    background: var(--color-orange);
+    padding: 12px 30px;
+    border-radius: 4px;
+  }
+}
