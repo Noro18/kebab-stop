@@ -14,7 +14,9 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <img src={aboutImg} alt="Kebab Stop logo" />
+          <div className="about-image-logo-frame">
+            <img src={aboutImg} alt="Kebab Stop logo" />
+          </div>
         </motion.div>
         
         <motion.div 
