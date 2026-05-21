@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './About.css';
-import aboutImg from '../assets/imgs/logo.jpg'; // Using logo as a placeholder or atmosphere shot
+import aboutImg from '../assets/imgs/Logo.png'; // Using logo as a placeholder or atmosphere shot
 
 const About: React.FC = () => {
   return (
@@ -14,8 +14,9 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <img src={aboutImg} alt="Kebab Stop Atmosphere" />
-          <div className="image-accent"></div>
+          <div className="about-image-logo-frame">
+            <img src={aboutImg} alt="Kebab Stop logo" />
+          </div>
         </motion.div>
         
         <motion.div 
